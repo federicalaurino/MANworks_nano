@@ -1,0 +1,1485 @@
+Importing descriptors for tissue and vessel problems ...
+---- PROBLEM DESCRIPTORS--------------------------
+ MESH FILE 3D problem      :  
+ MESH FILE 1D problem      : ./mesh_independence_tests/rattm93b_h_2.pts
+ IM  TYPE  3D problem      : IM_TETRAHEDRON(6)
+ IM  TYPE  1D problem      : IM_GAUSS1D(6)
+ FEM TYPE  3D velocity     : FEM_RT0(3)
+ FEM TYPE  3D pressure     : FEM_PK_DISCONTINUOUS(3,0)
+ FEM TYPE  3D coefficients : FEM_PK(3,0)
+ FEM TYPE  1D velocity     : FEM_PK(1,2)
+ FEM TYPE  1D pressure     : FEM_PK(1,1)
+ FEM TYPE  1D coefficients : FEM_PK(1,0)
+--------------------------------------------------
+Building the regular 3D mesh for the tissue ...  
+mesht description: GT='GT_PK(3,1)'; NSUBDIV=[60,40,30]; ORG=[0,0,0]; SIZES=[7.4,5,4]; NOISED=0
+Importing the 1D mesh for the vessel ... 
+Setting IMs for tissue and vessel problems ...
+Setting FEMs for tissue and vessel problems ...
+Setting IMs and FEMs for vessel branches ...
+Setting FEM dimensions for tissue and vessel problems ...
+--- DEGREES OF FREEDOM --- 
+  nb_dof_Pt     : 432000
+  nb_dof_Ut     : 874800
+  nb_dof_coeft  : 432000
+  nb_dof_Pv     : 1118
+  nb_dof_Uv     : 2268
+  nb_dof_coefv  : 1120
+  nb_dof_tot    : 1310186
+-------------------------- 
+Building parameters for tissue and vessel problems ...
+  Importing radius values from file ./mesh_independence_tests/rattm93b_h_2_radius.pts ...
+--- PHYSICAL PARAMS ------
+  R'     : 1.840000e-01
+  kappat : 3.333000e-06
+  Q      : 1.541321e-06
+  kappav : 1.500260e+01
+  Gamma  : 2.000000e+00
+--------------------------
+Building tissue boundary ...
+  face 0 : ('MIX',0.000000e+00,0,0)
+  face 1 : ('MIX',0.000000e+00,0,1)
+  face 2 : ('MIX',0.000000e+00,0,2)
+  face 3 : ('MIX',0.000000e+00,0,3)
+  face 4 : ('MIX',0.000000e+00,0,4)
+  face 5 : ('MIX',0.000000e+00,0,5)
+Building vessel boundary ...
+Found a trivial junction at i1 = 282
+Found a trivial junction at i1 = 441
+Found a trivial junction at i1 = 601
+Found a trivial junction at i1 = 959
+Found a trivial junction at i1 = 1038
+Found a trivial junction at i1 = 1078
+--- NETWORK ASSEMBLY ------------------ 
+  Branches:   28
+  Vertices:   1121
+  Extrema:    [0 161 481 561 641 720 721 840 919]
+    -  label=DIR, value=3.500000e+01, ind=0, rg=28, branches=vector(1) [ 0 ]
+    -  label=DIR, value=-3.000000e+01, ind=161, rg=33, branches=vector(1) [ 3 ]
+    -  label=DIR, value=-3.500000e+01, ind=481, rg=41, branches=vector(1) [ 11 ]
+    -  label=DIR, value=3.000000e+01, ind=561, rg=43, branches=vector(1) [ 14 ]
+    -  label=DIR, value=3.500000e+01, ind=641, rg=45, branches=vector(1) [ 16 ]
+    -  label=DIR, value=-3.500000e+01, ind=720, rg=46, branches=vector(1) [ 17 ]
+    -  label=DIR, value=3.000000e+01, ind=721, rg=47, branches=vector(1) [ 18 ]
+    -  label=DIR, value=3.000000e+01, ind=840, rg=49, branches=vector(1) [ 21 ]
+    -  label=DIR, value=3.500000e+01, ind=919, rg=50, branches=vector(1) [ 23 ]
+  Junctions: [40 41 81 121 162 202 203 282 322 401 441 521 601 761 959 1038 1078]
+    -  label=JUN, value=4.510000e-01, ind=40, rg=29, branches=vector(3) [ 0, -8, -22 ]
+    -  label=JUN, value=4.910000e-01, ind=41, rg=30, branches=vector(3) [ -1, -2, 22 ]
+    -  label=JUN, value=6.200000e-01, ind=81, rg=31, branches=vector(3) [ 1, -19, 21 ]
+    -  label=JUN, value=4.210000e-01, ind=121, rg=32, branches=vector(3) [ 2, -3, -25 ]
+    -  label=JUN, value=4.380000e-01, ind=162, rg=34, branches=vector(3) [ -4, 5, 27 ]
+    -  label=JUN, value=6.310000e-01, ind=202, rg=35, branches=vector(4) [ 4, 8, -12, 24 ]
+    -  label=JUN, value=4.080000e-01, ind=203, rg=36, branches=vector(3) [ -5, -6, 20 ]
+    -  label=JUN, value=1.880000e-01, ind=282, rg=37, branches=vector(2) [ 6, -7 ]
+    -  label=JUN, value=5.580000e-01, ind=322, rg=38, branches=vector(4) [ 7, -9, -10, 12 ]
+    -  label=JUN, value=6.340000e-01, ind=401, rg=39, branches=vector(3) [ 9, 13, -17 ]
+    -  label=JUN, value=2.800000e-01, ind=441, rg=40, branches=vector(2) [ 10, -11 ]
+    -  label=JUN, value=4.400000e-01, ind=521, rg=42, branches=vector(3) [ -13, 15, 16 ]
+    -  label=JUN, value=2.800000e-01, ind=601, rg=44, branches=vector(2) [ 14, -15 ]
+    -  label=JUN, value=5.800000e-01, ind=761, rg=48, branches=vector(3) [ 18, 19, -20 ]
+    -  label=JUN, value=2.800000e-01, ind=959, rg=51, branches=vector(2) [ 23, -24 ]
+    -  label=JUN, value=3.000000e-01, ind=1038, rg=52, branches=vector(2) [ 25, -26 ]
+    -  label=JUN, value=3.000000e-01, ind=1078, rg=53, branches=vector(2) [ 26, -27 ]
+---------------------------------------- 
+Allocating AM, UM, FM ...
+Assembling the monolithic matrix AM ...
+  Assembling Mtt and Dtt ...
+  Assembling Mvv and Dvv ...
+  Assembling Jvv ...
+  Copying -Jvv^T ...
+  Copying Jvv ...
+  Assembling aux exchange matrices Mbar and Mlin ...
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),2 dof of target mesh_fem have  been missed
+missing dofs : [995 1077]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),22 dof of target mesh_fem have  been missed
+missing dofs : [27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),20 dof of target mesh_fem have  been missed
+missing dofs : [28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),18 dof of target mesh_fem have  been missed
+missing dofs : [29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),16 dof of target mesh_fem have  been missed
+missing dofs : [30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),12 dof of target mesh_fem have  been missed
+missing dofs : [32 33 34 35 36 37 38 39 40 41 42 43]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),8 dof of target mesh_fem have  been missed
+missing dofs : [34 35 36 37 38 39 40 41]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),10 dof of target mesh_fem have  been missed
+missing dofs : [33 34 35 36 37 38 39 40 41 42]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),14 dof of target mesh_fem have  been missed
+missing dofs : [31 32 33 34 35 36 37 38 39 40 41 42 43 44]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),18 dof of target mesh_fem have  been missed
+missing dofs : [29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),22 dof of target mesh_fem have  been missed
+missing dofs : [27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),6 dof of target mesh_fem have  been missed
+missing dofs : [10 11 12 13 14 15]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),10 dof of target mesh_fem have  been missed
+missing dofs : [8 9 10 11 12 13 14 15 16 17]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),14 dof of target mesh_fem have  been missed
+missing dofs : [6 7 8 9 10 11 12 13 14 15 16 17 18 19]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),6 dof of target mesh_fem have  been missed
+missing dofs : [10 11 12 13 14 15]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),16 dof of target mesh_fem have  been missed
+missing dofs : [5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),12 dof of target mesh_fem have  been missed
+missing dofs : [7 8 9 10 11 12 13 14 15 16 17 18]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),18 dof of target mesh_fem have  been missed
+missing dofs : [4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),18 dof of target mesh_fem have  been missed
+missing dofs : [4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),20 dof of target mesh_fem have  been missed
+missing dofs : [3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),22 dof of target mesh_fem have  been missed
+missing dofs : [2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),14 dof of target mesh_fem have  been missed
+missing dofs : [6 7 8 9 10 11 12 13 14 15 16 17 18 19]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),22 dof of target mesh_fem have  been missed
+missing dofs : [2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),26 dof of target mesh_fem have  been missed
+missing dofs : [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),26 dof of target mesh_fem have  been missed
+missing dofs : [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24]
+
+  Assembling exchange matrices ...
+Assembling the monolithic rhs FM ... 
+  Initializing RHS for FM ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+asm_NET_BC DONE
+Solving the monolithic system ... 
+  Applying the Generalized Minimum Residual method ... 
+-----ZZZZZ ----- starting fix point
+ starting preconditioning
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 2.079900e-02 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 4.728389e+03 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 1
+  .ZZZZZ .. tissue gmres converged in 2712 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 1.128500e-02 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 1.263221e+02 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 2
+  .ZZZZZ .. tissue gmres converged in 70 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 1.167800e-02 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 3.272376e+00 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 3
+  .ZZZZZ .. tissue gmres converged in 0 iterations.
+  ... converged in 0 iterations.
+... time to solve : 5.909859e+03 seconds
+Compute the total flow rate ... 
+Found a trivial junction at i1 = 282
+Found a trivial junction at i1 = 441
+Found a trivial junction at i1 = 601
+Found a trivial junction at i1 = 959
+Found a trivial junction at i1 = 1038
+Found a trivial junction at i1 = 1078
+  Applying the Generalized Minimum Residual method to iter_solve... 
+-----ZZZZZ ----- starting fix point
+ starting preconditioning
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 1.241900e-02 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 6.304507e+03 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 1
+  .ZZZZZ .. tissue gmres converged in 3622 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 7.467000e-03 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 1.604521e+02 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 2
+  .ZZZZZ .. tissue gmres converged in 87 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 7.619000e-03 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 3.441034e+00 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 3
+  .ZZZZZ .. tissue gmres converged in 0 iterations.
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+Solution at iteration 1 saved
+TFR                 = 1.373840e-03
+Lymphatic Flow Rate = 1.312157e-03
+Flow Rate of cube   = 6.168333e-05
+
+Step n°:1
+Solution Residual = 2.478793e-01
+Mass Residual = 6.460663e-12
+Hematocrit Residual 9.429026e-03
+				Time: 7.632647e+03 s 
+********************************************************
+  Applying the Generalized Minimum Residual method to iter_solve... 
+-----ZZZZZ ----- starting fix point
+ starting preconditioning
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 1.329000e-02 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 5.949429e+03 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 1
+  .ZZZZZ .. tissue gmres converged in 3413 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 6.930000e-03 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 1.563348e+02 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 2
+  .ZZZZZ .. tissue gmres converged in 87 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 7.281000e-03 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 3.326760e+00 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 3
+  .ZZZZZ .. tissue gmres converged in 0 iterations.
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+Solution at iteration 2 saved
+TFR                 = 1.373780e-03
+Lymphatic Flow Rate = 1.312097e-03
+Flow Rate of cube   = 6.168311e-05
+
+Step n°:2
+Solution Residual = 3.789601e-03
+Mass Residual = 7.559618e-12
+Hematocrit Residual 5.075082e-03
+				Time: 7.284575e+03 s 
+********************************************************
+  Applying the Generalized Minimum Residual method to iter_solve... 
+-----ZZZZZ ----- starting fix point
+ starting preconditioning
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 1.254200e-02 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 6.096159e+03 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 1
+  .ZZZZZ .. tissue gmres converged in 3561 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 9.457000e-03 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 1.066644e+02 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 2
+  .ZZZZZ .. tissue gmres converged in 63 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 6.624000e-03 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 3.082669e+00 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 3
+  .ZZZZZ .. tissue gmres converged in 0 iterations.
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+Solution at iteration 3 saved
+TFR                 = 1.373748e-03
+Lymphatic Flow Rate = 1.312065e-03
+Flow Rate of cube   = 6.168299e-05
+
+Step n°:3
+Solution Residual = 1.929920e-03
+Mass Residual = 9.944502e-12
+Hematocrit Residual 2.756427e-03
+				Time: 7.304473e+03 s 
+********************************************************
+  Applying the Generalized Minimum Residual method to iter_solve... 
+-----ZZZZZ ----- starting fix point
+ starting preconditioning
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 1.179000e-02 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 4.727586e+03 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 1
+  .ZZZZZ .. tissue gmres converged in 2893 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 6.595000e-03 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 1.315624e+02 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 2
+  .ZZZZZ .. tissue gmres converged in 79 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 6.608000e-03 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 3.086032e+00 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 3
+  .ZZZZZ .. tissue gmres converged in 0 iterations.
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+Solution at iteration 4 saved
+TFR                 = 1.373731e-03
+Lymphatic Flow Rate = 1.312048e-03
+Flow Rate of cube   = 6.168293e-05
+
+Step n°:4
+Solution Residual = 9.995783e-04
+Mass Residual = 1.732879e-12
+Hematocrit Residual 1.509890e-03
+				Time: 5.914058e+03 s 
+********************************************************
+  Applying the Generalized Minimum Residual method to iter_solve... 
+-----ZZZZZ ----- starting fix point
+ starting preconditioning
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 1.160200e-02 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 5.177053e+03 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 1
+  .ZZZZZ .. tissue gmres converged in 3177 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 6.671000e-03 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 1.461356e+02 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 2
+  .ZZZZZ .. tissue gmres converged in 88 iterations.
+-----ZZZZZ ----- begin of while0 iterations.
+-----ZZZZZ ----- starting SuperLU vessel
+-----ZZZZZ ----- time to solveSuperLu vessel::gmm: 6.571000e-03 seconds
+-----ZZZZZ ----- starting gmres tissue
+-----ZZZZZ ----- ... time to solveGmres tissue::gmm: 3.083311e+00 seconds
+-----ZZZZZ ----- ... iteration to solve fix point::gmm: 3
+  .ZZZZZ .. tissue gmres converged in 0 iterations.
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+Solution at iteration 5 saved
+TFR                 = 1.373721e-03
+Lymphatic Flow Rate = 1.312038e-03
+Flow Rate of cube   = 6.168291e-05
+
+Step n°:5
+Solution Residual = 5.273272e-04
+Mass Residual = 1.031158e-11
+Hematocrit Residual 8.335167e-04
+				Time: 6.385919e+03 s 
+********************************************************
+Iterative Process Time = 3.742729e+04 s
+The method has NOT reached convergence for minimum residual
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ut ...
+    Projecting Ut on P1 ...
+  Exporting Pt ...
+  Exporting Lymphatic Drainage ...
+  Exporting Uv ...
+  Exporting Pv ...
+... export done, visualize the data file with (for example) Paraview 
+--- FINAL RESULTS -------------------------
+  Pt average            = 6.381486e-02
+  Pv average            = 3.312392e+01
+  Network-to-Tissue TFR = 1.373721e-03
+  Lymphatic FR          = 1.312038e-03
+  FR from the cube      = 6.168291e-05
+-------------------------------------------
+initialize transport problem...
+
+Importing descriptors for tissue and vessel problems ...
+---- TRANSPORT PROBLEM DESCRIPTORS--------------------------
+ FEM TYPE  3D concentration     : FEM_PK(3,1)
+ FEM TYPE  1D concentration     : FEM_PK(1,1)
+--------------------------------------------------
+Building the regular 3D mesh for the tissue ...  
+mesht description: GT='GT_PK(3,1)'; NSUBDIV=[60,40,30]; ORG=[0,0,0]; SIZES=[7.4,5,4]; NOISED=0
+Importing the 1D mesh for the vessel (transport problem)... 
+Setting FEMs for tissue and vessel problems ...
+Setting IMs and FEMs for tissue ...
+Setting IMs and FEMs for vessel branches ...
+Setting FEM dimensions for tissue and vessel problems ...
+--- DEGREES OF FREEDOM --- 
+  nb_dof_Ct     : 77531
+  nb_dof_Cv     : 1118
+  nb_dof_tot    : 78649
+-------------------------- 
+Setting IMs for tissue and vessel problems ...
+Setting FEMs for tissue and vessel problems ...
+Setting IMs and FEMs for vessel branches ...
+Setting FEM dimensions for tissue and vessel problems ...
+--- DEGREES OF FREEDOM --- 
+  nb_dof_Pt     : 432000
+  nb_dof_Ut     : 874800
+  nb_dof_coeft  : 432000
+  nb_dof_Pv     : 1118
+  nb_dof_Uv     : 2268
+  nb_dof_coefv  : 1120
+  nb_dof_tot    : 1310186
+-------------------------- 
+Building parameters for tissue and vessel problems ...
+  Importing radius values from file ./mesh_independence_tests/rattm93b_h_2_radius.pts ...
+  Assembling dimensionless parameters Dt, Dv, Dalpha, Q_pl ... 
+--- PHYSICAL PARAMS ------
+  At     : 1.870000e-07
+  Av : 2.221500e-05
+  Y      : 0.000000e+00
+  Q_pl : 1.389194e-04
+  D_alpha : 3.170000e-02
+  T : 2.000000e+01
+  dt : 1.000000e+00
+--------------------------
+Building tissue boundary ...
+  face 0 : ('MIX',0.000000e+00,0,0)
+  face 1 : ('MIX',0.000000e+00,0,1)
+  face 2 : ('MIX',0.000000e+00,0,2)
+  face 3 : ('MIX',0.000000e+00,0,3)
+  face 4 : ('MIX',0.000000e+00,0,4)
+  face 5 : ('MIX',0.000000e+00,0,5)
+Building vessel boundary ...
+Found a trivial junction at i1 = 282
+Found a trivial junction at i1 = 441
+Found a trivial junction at i1 = 601
+Found a trivial junction at i1 = 959
+Found a trivial junction at i1 = 1038
+Found a trivial junction at i1 = 1078
+--- NETWORK ASSEMBLY ------------------ 
+  Branches:   28
+  Vertices:   1121
+  Extrema:    [0 161 481 561 641 720 721 840 919]
+    -  label=DIR, value=1.000000e-02, ind=0, rg=28, branches=vector(1) [ 0 ]
+    -  label=MIX, value=0.000000e+00, ind=161, rg=33, branches=vector(1) [ 3 ]
+    -  label=DIR, value=1.000000e-02, ind=481, rg=41, branches=vector(1) [ 11 ]
+    -  label=MIX, value=0.000000e+00, ind=561, rg=43, branches=vector(1) [ 14 ]
+    -  label=DIR, value=1.000000e-02, ind=641, rg=45, branches=vector(1) [ 16 ]
+    -  label=DIR, value=1.000000e-02, ind=720, rg=46, branches=vector(1) [ 17 ]
+    -  label=MIX, value=0.000000e+00, ind=721, rg=47, branches=vector(1) [ 18 ]
+    -  label=MIX, value=0.000000e+00, ind=840, rg=49, branches=vector(1) [ 21 ]
+    -  label=DIR, value=1.000000e-02, ind=919, rg=50, branches=vector(1) [ 23 ]
+  Junctions: [40 41 81 121 162 202 203 282 322 401 441 521 601 761 959 1038 1078]
+    -  label=JUN, value=4.510000e-01, ind=40, rg=29, branches=vector(3) [ 0, -8, -22 ]
+    -  label=JUN, value=4.910000e-01, ind=41, rg=30, branches=vector(3) [ -1, -2, 22 ]
+    -  label=JUN, value=6.200000e-01, ind=81, rg=31, branches=vector(3) [ 1, -19, 21 ]
+    -  label=JUN, value=4.210000e-01, ind=121, rg=32, branches=vector(3) [ 2, -3, -25 ]
+    -  label=JUN, value=4.380000e-01, ind=162, rg=34, branches=vector(3) [ -4, 5, 27 ]
+    -  label=JUN, value=6.310000e-01, ind=202, rg=35, branches=vector(4) [ 4, 8, -12, 24 ]
+    -  label=JUN, value=4.080000e-01, ind=203, rg=36, branches=vector(3) [ -5, -6, 20 ]
+    -  label=JUN, value=1.880000e-01, ind=282, rg=37, branches=vector(2) [ 6, -7 ]
+    -  label=JUN, value=5.580000e-01, ind=322, rg=38, branches=vector(4) [ 7, -9, -10, 12 ]
+    -  label=JUN, value=6.340000e-01, ind=401, rg=39, branches=vector(3) [ 9, 13, -17 ]
+    -  label=JUN, value=2.800000e-01, ind=441, rg=40, branches=vector(2) [ 10, -11 ]
+    -  label=JUN, value=4.400000e-01, ind=521, rg=42, branches=vector(3) [ -13, 15, 16 ]
+    -  label=JUN, value=2.800000e-01, ind=601, rg=44, branches=vector(2) [ 14, -15 ]
+    -  label=JUN, value=5.800000e-01, ind=761, rg=48, branches=vector(3) [ 18, 19, -20 ]
+    -  label=JUN, value=2.800000e-01, ind=959, rg=51, branches=vector(2) [ 23, -24 ]
+    -  label=JUN, value=3.000000e-01, ind=1038, rg=52, branches=vector(2) [ 25, -26 ]
+    -  label=JUN, value=3.000000e-01, ind=1078, rg=53, branches=vector(2) [ 26, -27 ]
+---------------------------------------- 
+Allocating AM_transp, UM_transp, FM_transp ...
+Assembling the monolithic matrix AM_transp ...
+   Computing Peclet number...
+Peclet:   9.330229e+04
+Peclet:   8.127284e-02
+Peclet in vessels:    9.330229e+04
+Peclet in tissue:    8.127284e-02
+  Assembling Mt, Dt, Rt ...
+  Assembling Mv and Dv ...
+WARNING!! Peclet > 1 in network: applying artificial diffusion
+  Assembling Bt and Bv ...
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+			RIGID STRONG BOND
+--------------------------------------------------------------
+--------------------------------------------------------------
+  Solve the projection of the fluid dynamical quantities ... 
+  Assembling aux exchange matrices Mbar and Mlin ...
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),2 dof of target mesh_fem have  been missed
+missing dofs : [995 1077]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),22 dof of target mesh_fem have  been missed
+missing dofs : [27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),20 dof of target mesh_fem have  been missed
+missing dofs : [28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),18 dof of target mesh_fem have  been missed
+missing dofs : [29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),16 dof of target mesh_fem have  been missed
+missing dofs : [30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),12 dof of target mesh_fem have  been missed
+missing dofs : [32 33 34 35 36 37 38 39 40 41 42 43]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),8 dof of target mesh_fem have  been missed
+missing dofs : [34 35 36 37 38 39 40 41]
+*************Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),8 dof of target mesh_fem have  been missed
+missing dofs : [34 35 36 37 38 39 40 41]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),14 dof of target mesh_fem have  been missed
+missing dofs : [31 32 33 34 35 36 37 38 39 40 41 42 43 44]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),18 dof of target mesh_fem have  been missed
+missing dofs : [29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),22 dof of target mesh_fem have  been missed
+missing dofs : [27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49]
+***************************Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),6 dof of target mesh_fem have  been missed
+missing dofs : [10 11 12 13 14 15]
+*Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24]
+**********Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24]
+*******Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),26 dof of target mesh_fem have  been missed
+missing dofs : [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25]
+**Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),8 dof of target mesh_fem have  been missed
+missing dofs : [9 10 11 12 13 14 15 16]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),10 dof of target mesh_fem have  been missed
+missing dofs : [8 9 10 11 12 13 14 15 16 17]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),12 dof of target mesh_fem have  been missed
+missing dofs : [7 8 9 10 11 12 13 14 15 16 17 18]
+*Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),14 dof of target mesh_fem have  been missed
+missing dofs : [6 7 8 9 10 11 12 13 14 15 16 17 18 19]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),16 dof of target mesh_fem have  been missed
+missing dofs : [5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),18 dof of target mesh_fem have  been missed
+missing dofs : [4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),20 dof of target mesh_fem have  been missed
+missing dofs : [3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),22 dof of target mesh_fem have  been missed
+missing dofs : [2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),26 dof of target mesh_fem have  been missed
+missing dofs : [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25]
+***Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),4 dof of target mesh_fem have  been missed
+missing dofs : [11 12 13 14]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),14 dof of target mesh_fem have  been missed
+missing dofs : [6 7 8 9 10 11 12 13 14 15 16 17 18 19]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),20 dof of target mesh_fem have  been missed
+missing dofs : [3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22]
+Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24]
+***********Level 2 Warning in getfem/getfem_interpolation.h, line 516: in interpolation (different meshes),24 dof of target mesh_fem have  been missed
+missing dofs : [26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49]
+********************  Assembling exchange matrices ...
+    Assembling Bvv ...
+    Assembling Bvt ...
+    Assembling Btv (alternative form) ...
+    Assembling Btt (alternative form) ...
+  Setting initial condition for tissue and network concentration ...
+Solving the monolithic system ... 
+Solving the monolithic transport system ... 
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.000000e+00
+time = 0.000000e+00 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860894e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.385848e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 2.000000e+00
+time = 1.000000e+00 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860885e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.382140e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 3.000000e+00
+time = 2.000000e+00 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860875e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.247063e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 4.000000e+00
+time = 3.000000e+00 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860865e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.311747e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 5.000000e+00
+time = 4.000000e+00 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860855e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.286083e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 6.000000e+00
+time = 5.000000e+00 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860845e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.411994e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 7.000000e+00
+time = 6.000000e+00 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860835e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.404718e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 8.000000e+00
+time = 7.000000e+00 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860825e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.232575e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 9.000000e+00
+time = 8.000000e+00 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860815e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.227141e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.000000e+01
+time = 9.000000e+00 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860804e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.225267e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.100000e+01
+time = 1.000000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860794e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.371570e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.200000e+01
+time = 1.100000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860783e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.397398e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.300000e+01
+time = 1.200000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860782e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.273704e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.400000e+01
+time = 1.300000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860782e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.244591e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.500000e+01
+time = 1.400000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860782e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.230345e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.600000e+01
+time = 1.500000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860782e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.225997e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.700000e+01
+time = 1.600000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860782e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.401492e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.800000e+01
+time = 1.700000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860782e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.341544e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 1.900000e+01
+time = 1.800000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860782e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.225332e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 2.000000e+01
+time = 1.900000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860782e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.241252e+01 seconds
+  Exporting Psi ...
+-------------------------------------------
+Iteration number: 2.100000e+01
+time = 2.000000e+01 s
+
+  Update monolithic matrix and rhs vector ...
+Assembling the monolithic rhs FM_transp ... 
+  Building coupling dirichlet boundary term ...
+  Building tissue boundary term ...
+  Building vessel boundary term ...
+  Applying the SuperLU method ... 
+  Condition number (transport problem): 4.860782e-04
+solved! going to export...
+Exporting the solution (vtk format) to ./mesh_independence_tests/vtk/ ...
+  Saving the results from the monolithic unknown vector ... 
+  Exporting Ct ...
+  Exporting Cv ...
+... export done, visualize the data file with (for example) Paraview 
+exported!
+... time to solve : 9.242788e+01 seconds
+
+... time to solve all the time steps: 1.953113e+03 seconds
+  Exporting Psi ...
+Exporting the fluidynamcal quantities to ./mesh_independence_tests/vtk/ ...
+  Exporting Reynolds_v ...
+  Exporting Probability of adhesion_v...
+  Exporting Wall shear rate_v ...
+  Exporting vascular adhesion parameter Pi ...
+  Exporting Uv abs ...
+Psi integrated 3.103018e-04
+measure[0] 3.427982e+01
+  Exporting WSS ...
+------------------------------------------------------------------------
+ Compute MBD and MBA 
+------------------------------------------ 
+in branch 0 and junction 0 (region number :  29 )
+MBD_partial = 2.698366e-27
+MBA_partial = 1.146586e-26
+------------------------------------------ 
+in branch 1 and junction 1 (region number :  30 )
+MBD_partial = 6.091839e-24
+MBA_partial = 5.432270e-24
+------------------------------------------ 
+in branch 1 and junction 2 (region number :  31 )
+MBD_partial = 5.803848e-20
+MBA_partial = 2.563069e-19
+------------------------------------------ 
+in branch 2 and junction 1 (region number :  30 )
+MBD_partial = -1.222388e-25
+MBA_partial = 3.308395e-24
+------------------------------------------ 
+in branch 2 and junction 3 (region number :  32 )
+MBD_partial = 6.192982e-24
+MBA_partial = 1.665281e-23
+------------------------------------------ 
+in branch 3 and junction 3 (region number :  32 )
+MBD_partial = -2.712863e-25
+MBA_partial = 5.889926e-23
+------------------------------------------ 
+in branch 4 and junction 4 (region number :  34 )
+MBD_partial = 6.628056e-25
+MBA_partial = -1.772139e-22
+------------------------------------------ 
+in branch 4 and junction 5 (region number :  35 )
+MBD_partial = -4.341937e-25
+MBA_partial = -8.395693e-23
+------------------------------------------ 
+in branch 5 and junction 4 (region number :  34 )
+MBD_partial = 1.855053e-24
+MBA_partial = -6.148823e-23
+------------------------------------------ 
+in branch 5 and junction 6 (region number :  36 )
+MBD_partial = 2.207282e-25
+MBA_partial = -5.270872e-24
+------------------------------------------ 
+in branch 6 and junction 6 (region number :  36 )
+MBD_partial = -7.129849e-25
+MBA_partial = -1.404288e-24
+------------------------------------------ 
+in branch 6 and junction 7 (region number :  37 )
+MBD_partial = 4.739769e-28
+MBA_partial = -3.753801e-27
+------------------------------------------ 
+in branch 7 and junction 7 (region number :  37 )
+MBD_partial = 5.339907e-28
+MBA_partial = -3.753806e-27
+------------------------------------------ 
+in branch 7 and junction 8 (region number :  38 )
+MBD_partial = 7.056935e-25
+MBA_partial = -6.210560e-24
+------------------------------------------ 
+in branch 8 and junction 0 (region number :  29 )
+MBD_partial = 4.859752e-27
+MBA_partial = 2.959260e-27
+------------------------------------------ 
+in branch 8 and junction 5 (region number :  35 )
+MBD_partial = 2.153308e-24
+MBA_partial = 1.986209e-23
+------------------------------------------ 
+in branch 9 and junction 8 (region number :  38 )
+MBD_partial = -8.174583e-24
+MBA_partial = -2.800654e-23
+------------------------------------------ 
+in branch 9 and junction 9 (region number :  39 )
+MBD_partial = -7.453696e-27
+MBA_partial = -5.691177e-26
+------------------------------------------ 
+in branch 10 and junction 8 (region number :  38 )
+MBD_partial = 1.003131e-23
+MBA_partial = -1.114580e-23
+------------------------------------------ 
+in branch 10 and junction 10 (region number :  40 )
+MBD_partial = -1.036931e-24
+MBA_partial = -1.510077e-23
+------------------------------------------ 
+in branch 11 and junction 10 (region number :  40 )
+MBD_partial = -1.024824e-24
+MBA_partial = -1.510078e-23
+------------------------------------------ 
+in branch 12 and junction 5 (region number :  35 )
+MBD_partial = 1.048141e-23
+MBA_partial = -4.116862e-23
+------------------------------------------ 
+in branch 12 and junction 8 (region number :  38 )
+MBD_partial = -6.580403e-25
+MBA_partial = -3.294178e-23
+------------------------------------------ 
+in branch 13 and junction 9 (region number :  39 )
+MBD_partial = -8.298711e-27
+MBA_partial = -1.611936e-25
+------------------------------------------ 
+in branch 13 and junction 11 (region number :  42 )
+MBD_partial = -6.239553e-25
+MBA_partial = -6.207092e-24
+------------------------------------------ 
+in branch 14 and junction 12 (region number :  44 )
+MBD_partial = -1.195518e-27
+MBA_partial = -7.012267e-24
+------------------------------------------ 
+in branch 15 and junction 11 (region number :  42 )
+MBD_partial = -4.411392e-27
+MBA_partial = -6.461098e-24
+------------------------------------------ 
+in branch 15 and junction 12 (region number :  44 )
+MBD_partial = -1.332774e-27
+MBA_partial = -7.012267e-24
+------------------------------------------ 
+in branch 16 and junction 11 (region number :  42 )
+MBD_partial = -7.351592e-25
+MBA_partial = 2.539980e-25
+------------------------------------------ 
+in branch 17 and junction 9 (region number :  39 )
+MBD_partial = -1.640447e-26
+MBA_partial = -2.181047e-25
+------------------------------------------ 
+in branch 18 and junction 13 (region number :  48 )
+MBD_partial = 5.759181e-21
+MBA_partial = -3.564784e-19
+------------------------------------------ 
+in branch 19 and junction 2 (region number :  31 )
+MBD_partial = 8.327214e-20
+MBA_partial = 7.911896e-20
+------------------------------------------ 
+in branch 19 and junction 13 (region number :  48 )
+MBD_partial = -1.359491e-19
+MBA_partial = 8.160991e-20
+------------------------------------------ 
+in branch 20 and junction 6 (region number :  36 )
+MBD_partial = -6.882139e-25
+MBA_partial = -6.675160e-24
+------------------------------------------ 
+in branch 20 and junction 13 (region number :  48 )
+MBD_partial = -1.148906e-19
+MBA_partial = -2.748684e-19
+------------------------------------------ 
+in branch 21 and junction 2 (region number :  31 )
+MBD_partial = 9.235050e-21
+MBA_partial = -1.771878e-19
+------------------------------------------ 
+in branch 22 and junction 0 (region number :  29 )
+MBD_partial = 5.245830e-29
+MBA_partial = 8.506599e-27
+------------------------------------------ 
+in branch 22 and junction 1 (region number :  30 )
+MBD_partial = 2.154393e-24
+MBA_partial = 8.740670e-24
+------------------------------------------ 
+in branch 23 and junction 14 (region number :  51 )
+MBD_partial = 3.899134e-27
+MBA_partial = 3.216244e-26
+------------------------------------------ 
+in branch 24 and junction 5 (region number :  35 )
+MBD_partial = 8.337766e-24
+MBA_partial = 2.292619e-23
+------------------------------------------ 
+in branch 24 and junction 14 (region number :  51 )
+MBD_partial = 4.329409e-27
+MBA_partial = 3.216249e-26
+------------------------------------------ 
+in branch 25 and junction 3 (region number :  32 )
+MBD_partial = 5.703430e-24
+MBA_partial = -4.224645e-23
+------------------------------------------ 
+in branch 25 and junction 15 (region number :  52 )
+MBD_partial = 2.831557e-25
+MBA_partial = -8.560514e-23
+------------------------------------------ 
+in branch 26 and junction 15 (region number :  52 )
+MBD_partial = 2.821980e-25
+MBA_partial = -8.560507e-23
+------------------------------------------ 
+in branch 26 and junction 16 (region number :  53 )
+MBD_partial = 2.422142e-25
+MBA_partial = -9.970421e-23
+------------------------------------------ 
+in branch 27 and junction 4 (region number :  34 )
+MBD_partial = 1.022573e-25
+MBA_partial = -1.157257e-22
+------------------------------------------ 
+in branch 27 and junction 16 (region number :  53 )
+MBD_partial = 2.405081e-25
+MBA_partial = -9.970418e-23
+  Junctions: 
+    -  label=JUN, value=4.510000e-01, ind=40, rg=29, branches=vector(3) [ 0, -8, -22 ]
+ Mass balance of diffusive fluxes = 2.213845e-27
+ Mass balance of advective fluxes = -1.079219e-33
+             ------------------- 
+    -  label=JUN, value=4.910000e-01, ind=41, rg=30, branches=vector(3) [ -1, -2, 22 ]
+ Mass balance of diffusive fluxes = 3.815207e-24
+ Mass balance of advective fluxes = -4.748221e-30
+             ------------------- 
+    -  label=JUN, value=6.200000e-01, ind=81, rg=31, branches=vector(3) [ 1, -19, 21 ]
+ Mass balance of diffusive fluxes = 1.599861e-20
+ Mass balance of advective fluxes = -1.072521e-25
+             ------------------- 
+    -  label=JUN, value=4.210000e-01, ind=121, rg=32, branches=vector(3) [ 2, -3, -25 ]
+ Mass balance of diffusive fluxes = -7.608384e-25
+ Mass balance of advective fluxes = -5.745614e-30
+             ------------------- 
+    -  label=JUN, value=4.380000e-01, ind=162, rg=34, branches=vector(3) [ -4, 5, 27 ]
+ Mass balance of diffusive fluxes = -1.294504e-24
+ Mass balance of advective fluxes = -2.856849e-29
+             ------------------- 
+    -  label=JUN, value=6.310000e-01, ind=202, rg=35, branches=vector(4) [ 4, 8, -12, 24 ]
+ Mass balance of diffusive fluxes = 4.245314e-25
+ Mass balance of advective fluxes = 2.746569e-29
+             ------------------- 
+    -  label=JUN, value=4.080000e-01, ind=203, rg=36, branches=vector(3) [ -5, -6, 20 ]
+ Mass balance of diffusive fluxes = 1.959573e-25
+ Mass balance of advective fluxes = -5.875107e-31
+             ------------------- 
+    -  label=JUN, value=1.880000e-01, ind=282, rg=37, branches=vector(2) [ 6, -7 ]
+ Mass balance of diffusive fluxes = 6.001378e-29
+ Mass balance of advective fluxes = -5.124099e-33
+             ------------------- 
+    -  label=JUN, value=5.580000e-01, ind=322, rg=38, branches=vector(4) [ 7, -9, -10, 12 ]
+ Mass balance of diffusive fluxes = 1.809074e-24
+ Mass balance of advective fluxes = 2.305339e-30
+             ------------------- 
+    -  label=JUN, value=6.340000e-01, ind=401, rg=39, branches=vector(3) [ 9, 13, -17 ]
+ Mass balance of diffusive fluxes = -6.520615e-28
+ Mass balance of advective fluxes = 6.535022e-31
+             ------------------- 
+    -  label=JUN, value=2.800000e-01, ind=441, rg=40, branches=vector(2) [ 10, -11 ]
+ Mass balance of diffusive fluxes = 1.210605e-26
+ Mass balance of advective fluxes = -6.802807e-30
+             ------------------- 
+    -  label=JUN, value=4.400000e-01, ind=521, rg=42, branches=vector(3) [ -13, 15, 16 ]
+ Mass balance of diffusive fluxes = 1.156152e-25
+ Mass balance of advective fluxes = 8.857745e-30
+             ------------------- 
+    -  label=JUN, value=2.800000e-01, ind=601, rg=44, branches=vector(2) [ 14, -15 ]
+ Mass balance of diffusive fluxes = -1.372561e-28
+ Mass balance of advective fluxes = -6.450565e-31
+             ------------------- 
+    -  label=JUN, value=5.800000e-01, ind=761, rg=48, branches=vector(3) [ 18, 19, -20 ]
+ Mass balance of diffusive fluxes = 1.529933e-20
+ Mass balance of advective fluxes = 2.782650e-26
+             ------------------- 
+    -  label=JUN, value=2.800000e-01, ind=959, rg=51, branches=vector(2) [ 23, -24 ]
+ Mass balance of diffusive fluxes = 4.302755e-28
+ Mass balance of advective fluxes = 5.036572e-32
+             ------------------- 
+    -  label=JUN, value=3.000000e-01, ind=1038, rg=52, branches=vector(2) [ 25, -26 ]
+ Mass balance of diffusive fluxes = -9.577016e-28
+ Mass balance of advective fluxes = 6.760901e-29
+             ------------------- 
+    -  label=JUN, value=3.000000e-01, ind=1078, rg=53, branches=vector(2) [ 26, -27 ]
+ Mass balance of diffusive fluxes = -1.706172e-27
+ Mass balance of advective fluxes = 2.981532e-29
+             ------------------- 
+----------------------------------------------- 

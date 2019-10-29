@@ -1,0 +1,6 @@
+Transport3d1dhpp_old & Transport3d1dcpp_old
+
+The density psi was negative in some points. Correction: To compute Psi I don't project Pigreco on mf_Cv anymore. Instead, I project Cv on mf_coefv.
+
+Correct files: Transport3d1d.hpp & Transport3d1d.cpp
+

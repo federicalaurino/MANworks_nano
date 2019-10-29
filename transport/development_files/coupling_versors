@@ -1,0 +1,166 @@
+MESH: biforcazione, tre rami con 21 punti ciascuno. (totale dof mesh = 61 punti distinti)
+
+L'oggetto mf_v salva in questo modo i punti:
+ - gli indici da 0 a 20 sono del ramo di inflow
+ - l'indice 20, e tutti gli indici dispari da 21 a 59 sono dell'outflow che termina in [1, 0.9, 0.5].
+ - l'indice 20, e tutti gli indici pari da 22 a 60 sono dell'outflow che termina in [1, 0.1, 0.5].
+ 
+
+Nel codice di Notaro, il ciclo su tutti i punti è questo:
+
+Point number 0 has coordinates: [0, 0.5, 0.5]
+Point number 1 has coordinates: [0.029, 0.5, 0.5]
+Point number 2 has coordinates: [0.058, 0.5, 0.5]
+Point number 3 has coordinates: [0.087, 0.5, 0.5]
+Point number 4 has coordinates: [0.116, 0.5, 0.5]
+Point number 5 has coordinates: [0.145, 0.5, 0.5]
+Point number 6 has coordinates: [0.174, 0.5, 0.5]
+Point number 7 has coordinates: [0.203, 0.5, 0.5]
+Point number 8 has coordinates: [0.232, 0.5, 0.5]
+Point number 9 has coordinates: [0.261, 0.5, 0.5]
+Point number 10 has coordinates: [0.29, 0.5, 0.5]
+Point number 11 has coordinates: [0.319, 0.5, 0.5]
+Point number 12 has coordinates: [0.348, 0.5, 0.5]
+Point number 13 has coordinates: [0.377, 0.5, 0.5]
+Point number 14 has coordinates: [0.406, 0.5, 0.5]
+Point number 15 has coordinates: [0.435, 0.5, 0.5]
+Point number 16 has coordinates: [0.464, 0.5, 0.5]
+Point number 17 has coordinates: [0.493, 0.5, 0.5]
+Point number 18 has coordinates: [0.522, 0.5, 0.5]
+Point number 19 has coordinates: [0.551, 0.5, 0.5]
+Point number 20 has coordinates: [0.58, 0.5, 0.5]
+Point number 21 has coordinates: [0.601, 0.52, 0.5]
+Point number 22 has coordinates: [0.601, 0.48, 0.5]
+Point number 23 has coordinates: [0.622, 0.54, 0.5]
+Point number 24 has coordinates: [0.622, 0.46, 0.5]
+Point number 25 has coordinates: [0.643, 0.56, 0.5]
+Point number 26 has coordinates: [0.643, 0.44, 0.5]
+Point number 27 has coordinates: [0.664, 0.58, 0.5]
+Point number 28 has coordinates: [0.664, 0.42, 0.5]
+Point number 29 has coordinates: [0.685, 0.6, 0.5]
+Point number 30 has coordinates: [0.685, 0.4, 0.5]
+Point number 31 has coordinates: [0.706, 0.62, 0.5]
+Point number 32 has coordinates: [0.706, 0.38, 0.5]
+Point number 33 has coordinates: [0.727, 0.64, 0.5]
+Point number 34 has coordinates: [0.727, 0.36, 0.5]
+Point number 35 has coordinates: [0.748, 0.66, 0.5]
+Point number 36 has coordinates: [0.748, 0.34, 0.5]
+Point number 37 has coordinates: [0.769, 0.68, 0.5]
+Point number 38 has coordinates: [0.769, 0.32, 0.5]
+Point number 39 has coordinates: [0.79, 0.7, 0.5]
+Point number 40 has coordinates: [0.79, 0.3, 0.5]
+Point number 41 has coordinates: [0.811, 0.72, 0.5]
+Point number 42 has coordinates: [0.811, 0.28, 0.5]
+Point number 43 has coordinates: [0.832, 0.74, 0.5]
+Point number 44 has coordinates: [0.832, 0.26, 0.5]
+Point number 45 has coordinates: [0.853, 0.76, 0.5]
+Point number 46 has coordinates: [0.853, 0.24, 0.5]
+Point number 47 has coordinates: [0.874, 0.78, 0.5]
+Point number 48 has coordinates: [0.874, 0.22, 0.5]
+Point number 49 has coordinates: [0.895, 0.8, 0.5]
+Point number 50 has coordinates: [0.895, 0.2, 0.5]
+Point number 51 has coordinates: [0.916, 0.82, 0.5]
+Point number 52 has coordinates: [0.916, 0.18, 0.5]
+Point number 53 has coordinates: [0.937, 0.84, 0.5]
+Point number 54 has coordinates: [0.937, 0.16, 0.5]
+Point number 55 has coordinates: [0.958, 0.86, 0.5]
+Point number 56 has coordinates: [0.958, 0.14, 0.5]
+Point number 57 has coordinates: [0.979, 0.88, 0.5]
+Point number 58 has coordinates: [0.979, 0.12, 0.5]
+Point number 59 has coordinates: [1, 0.9, 0.5]
+Point number 60 has coordinates: [1, 0.1, 0.5]
+
+Visto che tale codice calcola il versore del ramo come P(i)-P(i-1) esso non è corretto perchè negli outflow, il punto precedente non appartiene allo stesso ramo. In casi anche più complessi, non puoi quindi prevedere che i punti con indici consecutivi siano consecutivi nella rete.
+
+La correzione prevede di usare un ciclo sui rami e successivamente un ciclo su tutti i punti del singolo ramo.
+In tal caso, il ciclo su tutti i punti è questo:
+
+Point number 0 has coordinates: [0, 0.5, 0.5]
+Point number 1 has coordinates: [0.029, 0.5, 0.5]
+Point number 2 has coordinates: [0.058, 0.5, 0.5]
+Point number 3 has coordinates: [0.087, 0.5, 0.5]
+Point number 4 has coordinates: [0.116, 0.5, 0.5]
+Point number 5 has coordinates: [0.145, 0.5, 0.5]
+Point number 6 has coordinates: [0.174, 0.5, 0.5]
+Point number 7 has coordinates: [0.203, 0.5, 0.5]
+Point number 8 has coordinates: [0.232, 0.5, 0.5]
+Point number 9 has coordinates: [0.261, 0.5, 0.5]
+Point number 10 has coordinates: [0.29, 0.5, 0.5]
+Point number 11 has coordinates: [0.319, 0.5, 0.5]
+Point number 12 has coordinates: [0.348, 0.5, 0.5]
+Point number 13 has coordinates: [0.377, 0.5, 0.5]
+Point number 14 has coordinates: [0.406, 0.5, 0.5]
+Point number 15 has coordinates: [0.435, 0.5, 0.5]
+Point number 16 has coordinates: [0.464, 0.5, 0.5]
+Point number 17 has coordinates: [0.493, 0.5, 0.5]
+Point number 18 has coordinates: [0.522, 0.5, 0.5]
+Point number 19 has coordinates: [0.551, 0.5, 0.5]
+Point number 20 has coordinates: [0.58, 0.5, 0.5]
+Point number 20 has coordinates: [0.58, 0.5, 0.5]
+Point number 21 has coordinates: [0.601, 0.52, 0.5]
+Point number 23 has coordinates: [0.622, 0.54, 0.5]
+Point number 25 has coordinates: [0.643, 0.56, 0.5]
+Point number 27 has coordinates: [0.664, 0.58, 0.5]
+Point number 29 has coordinates: [0.685, 0.6, 0.5]
+Point number 31 has coordinates: [0.706, 0.62, 0.5]
+Point number 33 has coordinates: [0.727, 0.64, 0.5]
+Point number 35 has coordinates: [0.748, 0.66, 0.5]
+Point number 37 has coordinates: [0.769, 0.68, 0.5]
+Point number 39 has coordinates: [0.79, 0.7, 0.5]
+Point number 41 has coordinates: [0.811, 0.72, 0.5]
+Point number 43 has coordinates: [0.832, 0.74, 0.5]
+Point number 45 has coordinates: [0.853, 0.76, 0.5]
+Point number 47 has coordinates: [0.874, 0.78, 0.5]
+Point number 49 has coordinates: [0.895, 0.8, 0.5]
+Point number 51 has coordinates: [0.916, 0.82, 0.5]
+Point number 53 has coordinates: [0.937, 0.84, 0.5]
+Point number 55 has coordinates: [0.958, 0.86, 0.5]
+Point number 57 has coordinates: [0.979, 0.88, 0.5]
+Point number 59 has coordinates: [1, 0.9, 0.5]
+Point number 20 has coordinates: [0.58, 0.5, 0.5]
+Point number 22 has coordinates: [0.601, 0.48, 0.5]
+Point number 24 has coordinates: [0.622, 0.46, 0.5]
+Point number 26 has coordinates: [0.643, 0.44, 0.5]
+Point number 28 has coordinates: [0.664, 0.42, 0.5]
+Point number 30 has coordinates: [0.685, 0.4, 0.5]
+Point number 32 has coordinates: [0.706, 0.38, 0.5]
+Point number 34 has coordinates: [0.727, 0.36, 0.5]
+Point number 36 has coordinates: [0.748, 0.34, 0.5]
+Point number 38 has coordinates: [0.769, 0.32, 0.5]
+Point number 40 has coordinates: [0.79, 0.3, 0.5]
+Point number 42 has coordinates: [0.811, 0.28, 0.5]
+Point number 44 has coordinates: [0.832, 0.26, 0.5]
+Point number 46 has coordinates: [0.853, 0.24, 0.5]
+Point number 48 has coordinates: [0.874, 0.22, 0.5]
+Point number 50 has coordinates: [0.895, 0.2, 0.5]
+Point number 52 has coordinates: [0.916, 0.18, 0.5]
+Point number 54 has coordinates: [0.937, 0.16, 0.5]
+Point number 56 has coordinates: [0.958, 0.14, 0.5]
+Point number 58 has coordinates: [0.979, 0.12, 0.5]
+Point number 60 has coordinates: [1, 0.1, 0.5]
+
+Abbiamo quindi che i versori sono giustamente generati da coppie di punti adiacenti.
+Abbiamo però che aggiungiamo tre contributi uguali al punto di junction.
+
+Guardando i grafici, in ogni caso non otteniamo una variazione significativa tra le soluzioni dei due codici.
+
+Grafici: Simulazione con parametri non fisiologici: At=1 e Av=1; Q=0.1; Y=10; condizioni Robin nel tessuto
+
+
+Usa queste righe di codice per ottenere la lista dei punti:
+
+/*
+cout <<"indexes like old code" <<endl;
+	for (size_type i = 0; i < nb_dof_v; i++){
+ cout << "Point number "<<i<< " has coordinates: "<<mf_v.point_of_basic_dof(i)<<endl;}
+	cout << endl<< endl<< endl;
+
+cout <<"indexes like new code" <<endl;
+		for (size_type b = 0; b < nb_branches; b++){
+dal::bit_vector dofs_b= mf_v.basic_dof_on_region(b);
+	for (dal::bv_visitor i(dofs_b); !i.finished(); ++i){
+cout << "Point number "<<i<< " has coordinates: "<<mf_v.point_of_basic_dof(i)<<endl;
+	}}
+	cout << endl<< endl<< endl;
+*/
+

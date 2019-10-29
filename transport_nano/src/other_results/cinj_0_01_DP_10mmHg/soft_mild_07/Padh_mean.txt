@@ -1,0 +1,2 @@
+branch0,branch1,branch2,branch3,branch4,branch5,branch6,branch7,branch8,branch9,branch10,branch11,branch12,branch13,branch14,branch15,branch16,branch17,branch18,branch19,branch20,branch21,branch22,branch23,branch24,branch25,branch26,branch27,
+0,0.262867,0.333111,0,0,0,0.600359,0.600346,0.283402,0,0.50295,0.502937,0,0,0,0,0.746075,0,0,0.672302,0.00643031,0.24071,0,0.268969,0.268981,0,0,0,

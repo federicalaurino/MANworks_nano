@@ -1,0 +1,40 @@
+Rigid particles, Strong bonds, rho=0.5
+
+
+Results1 	Simulation time 2s
+		Bolus time 1s
+		Cinj 1%Cref
+
+
+Results2 	Simulation time 20s
+		Bolus time 10s
+		Cinj 1%Cref
+		
+
+Results3 	Simulation time 200s
+		Bolus time 100s
+		Cinj 1%Cref
+
+Results4 	Simulation time 1000s
+		Bolus time 500s
+		Cinj 1%Cref
+	
+Results5 	Simulation time 2s
+		Bolus time 1s
+		Cinj 10%Cref
+
+Results6 	Simulation time 20s
+		Bolus time 10s
+		Cinj 10%Cref
+
+Results7 	Simulation time 200s
+		Bolus time 100s
+		Cinj 10%Cref
+
+Results8 	Simulation time 1000s
+		Bolus time 500s
+		Cinj 10%Cref
+
+Results9 	Simulation time 2000s
+		Bolus time 1000s
+		Cinj 10%Cref
