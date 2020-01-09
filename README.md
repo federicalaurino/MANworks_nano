@@ -2,19 +2,23 @@
 
 #### *Politecnico di Milano* (ITALY)
 
-**Author** : Annagiulia Tiozzo and Federica Laurino
+**Author** : Federica Laurino and Annagiulia Tiozzo
 
-**Mailto** : <annagiulia92t@gmail.com>; <federica.laurino@polimi.it>
+**Mailto** :  <federica.laurino@polimi.it>; <annagiulia92t@gmail.com>
 
-**Date**   : July 2017
+**Date**   : January 2020
 
 
 -------------------------------------------------------
 
 ## THE PACKAGE
 
-- **No_haematrocrit** : contains the code for solving the nanoparticle transport and adhesion problem and the drugdelivery problem. The fluid dynamic problem is solved WITHOUT taking into account the effect of the haematoctit
+- **No_haematrocrit** : contains the code for solving the NPs (nanoparticles) transport and adhesion problem and the drugdelivery problem. The fluid dynamic problem is solved WITHOUT taking into account the effect of the RBCs (Red Blood Cells)
 
-- **No_haematrocrit** : contains the code for solving the nanoparticle transport and adhesion problem and the drugdelivery problem. The fluid dynamic problem is solved WITHOUT taking into account the effect of the haematoctit
+- **drugdelivery_nano** : contains the code for solving the drugdelivery problem (transport and adhesion of NPs + extravasation of the loaded agent in the interstial volume). The fluid dynamic problem is solved TAKING INTO ACCOUNT the effect of the RBCs
 
-- `Transport_3D1D_Drugdelivery` : The folder contains the code for solving the fluid problem and the mass transport (nanoparticle) without coupling terms, due to the presence of the drug delivery term (Simulation C of my master thesis)
+- **fluid_ht_curv** : contains the code for solving the fluid dynamic problem TAKING INTO ACCOUNT the effect of the RBCs
+
+- **transport** : contains the code for solving the generic mass transport problem (from S.Brambilla)
+
+- **transport_nano** : contains the code for simulating the transport and adhesion of nanoparticles. The fluid dynamic problem is solved TAKING INTO ACCOUNT the effect of the RBCs.
