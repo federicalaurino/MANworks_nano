@@ -18,7 +18,7 @@
 
 See ../transport/README.md by S. Brambilla
 
-The folder `src/` contains the **results contained in the PhD thesis 'Mixed-dimensional PDEs arising from
+The folder `src/` contains the **part of the results published in the PhD thesis 'Mixed-dimensional PDEs arising from
 model reduction for multiscale modeling
 of vascular transport'** by Laurino. In particular
 
