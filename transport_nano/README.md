@@ -20,7 +20,7 @@
 
 - `lib/`     : Main library (to be generated)
 
-- `src/`     : Example sources
+- `src/`     : Example sources, **results contained in the paper 'A HIERARCHICAL MULTISCALE MODEL FOR PREDICTING THE VASCULAR BEHAVIOR OF BLOOD - BORNE NANOMEDICINES'** by Laurino et al.
   
 - `config.mk`: Specify some variables for compiler
 
