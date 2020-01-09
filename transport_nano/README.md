@@ -18,7 +18,7 @@
 
 See ../transport/README.md by S. Brambilla
 
-The folder `src/` contains the **results contained in the paper 'A HIERARCHICAL MULTISCALE MODEL FOR PREDICTING THE VASCULAR BEHAVIOR OF BLOOD - BORNE NANOMEDICINES'** by Laurino et al. In particular,
+The folder `src/` contains the **results included in the paper 'A HIERARCHICAL MULTISCALE MODEL FOR PREDICTING THE VASCULAR BEHAVIOR OF BLOOD - BORNE NANOMEDICINES'** by Laurino et al. In particular,
 
 - `src/results_adhesion/cinj_0_0_1` contains the results depicted in figures 6, 8, 9.
 
