@@ -22,14 +22,8 @@ The folder `src/` contains the **part of the results published in the PhD thesis
 model reduction for multiscale modeling
 of vascular transport'** by Laurino. In particular
 
-- `src/results_adhesion/cinj_0_0_1` contains the results depicted in figures 6, 8, 9.
+- `src/extravasation/neu_10_cref_60sinj_10msim` and `src/extravasation/neu_10_cref_60sinj_1hsim` contains the results depicted in figure 5.18.
 
-- `src/results_adhesion/cinj_0_1` contains the results depicted in figures 3. 10.
-
-- `src/mesh_independence_tests` contains the results depicted in figure S1 of the supplementary material
-
-- `src/other_results` (NOT PUBLISHED) contains the results obtained for different values of the pressure at the inlets and outlets of the network
-
-- `src/utilities/secomb2mox` is a MATLAB file to convert the Secomb network in our format
+- `src/extravasation/10_cref_60sinj_10msim` and `src/extravasation/10_cref_60sinj_1hsim` contains the results depicted in figure 5.19.
 
 
