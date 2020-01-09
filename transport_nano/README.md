@@ -1,30 +1,15 @@
-# Mixed Finite Element Methods for Coupled 3D/1D Fluid Problems
+# MANworks_nano : Computational models for nanoparticle transport in the vascular system
+
 #### *Politecnico di Milano* (ITALY)
 
-**Author** : Stefano Brambilla 
+**Author** : Federica Laurino and Annagiulia Tiozzo
 
-**Mailto** : <s.brambilla93@gmail.com>
+**Mailto** :  <federica.laurino@polimi.it>; <annagiulia92t@gmail.com>
 
-**Date**   : March 2018
+**Date**   : January 2020
 
-#### *Previous projects*
 
-**Authors** :  Luca Possenti, Simone Di Gregorio, Giorgio Raimondi, Fannie Gerosa
-
-**Mailto** : <luca.possenti@polimi.it>
-
-**Date**   : January 2018
-
-**Github Page** : https://github.com/lpossenti/MANworks_ht_curvature
-
----------------------
-**Author** : Domenico Notaro 
-
-**Mailto** : <domenico.not@gmail.com>
-
-**Date**   : March 2016
-
-**Github Page** : https://github.com/domeniconotaro/PACS
+-------------------------------------------------------
 
 -------------------------------------------------------
 ## How to install and run the program
@@ -36,14 +21,6 @@
 - `lib/`     : Main library (to be generated)
 
 - `src/`     : Example sources
-  - `1_singlebranch_transp/` : solve the coupling with single-vessel network
-  - `2_Ybifurcation_transp/` : solve the problem with Y-shaped network
-  - `3_network_transp/`  : solve te problem with a small network
-  - `4_curved_singlebranch/`  : solve the problem with a curved single-vessel network
-  - `5_curved_bifurcation/`  : solve the problem with curved Y-shaped network
-  - `6_anastomosis/`  : solve the problem with anastomosis network
-  - `7_Voronoi_network/`  : solve te problem with a Voronoi network
- 
   
 - `config.mk`: Specify some variables for compiler
 
